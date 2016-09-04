@@ -1,10 +1,34 @@
 module Html.Template exposing (view)
 
+{-| This is a large amount of html elements for showcasing styles on a single page. Helpful
+for if you're creating things like styleguides, resets, or other css related libraries and need
+a quick, large set of HTML elements to showcase those styles.
+
+# Html Template
+@docs view
+
+-}
+
+
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Svg
 import Svg.Attributes
 
+
+{-| The html template view for use in your view functions
+
+    module MyModule exposing (..)
+
+    import Html exposing (Html, div)
+    import Html.Template
+
+    main : Html a
+    main =
+        div []
+            [ Html.Template.view
+            ]
+-}
 view : Html a
 view =
     div [ id "top" ]
