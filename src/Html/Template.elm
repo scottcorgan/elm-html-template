@@ -9,7 +9,6 @@ a quick, large set of HTML elements to showcase those styles.
 
 -}
 
-
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Svg
@@ -39,16 +38,16 @@ view =
         , nav []
             [ ul []
                 [ li []
-                    [ a [ href "#text"] [ text "Text" ]
+                    [ a [ href "#text" ] [ text "Text" ]
                     , ul []
-                        [ li []  [ a [ href "#text__headings" ] [ text "Headings" ] ]
-                        , li []  [ a [ href "#text__paragraphs" ] [ text "Paragraphs" ] ]
-                        , li []  [ a [ href "#text__blockquotes" ] [ text "Blockquotes" ] ]
-                        , li []  [ a [ href "#text__lists" ] [ text "Lists" ] ]
-                        , li []  [ a [ href "#text__hr" ] [ text "Horizontal rules" ] ]
-                        , li []  [ a [ href "#text__tables" ] [ text "Tabular data" ] ]
-                        , li []  [ a [ href "#text__code" ] [ text "Code" ] ]
-                        , li []  [ a [ href "#text__inline" ] [ text "Inline elements" ] ]
+                        [ li [] [ a [ href "#text__headings" ] [ text "Headings" ] ]
+                        , li [] [ a [ href "#text__paragraphs" ] [ text "Paragraphs" ] ]
+                        , li [] [ a [ href "#text__blockquotes" ] [ text "Blockquotes" ] ]
+                        , li [] [ a [ href "#text__lists" ] [ text "Lists" ] ]
+                        , li [] [ a [ href "#text__hr" ] [ text "Horizontal rules" ] ]
+                        , li [] [ a [ href "#text__tables" ] [ text "Tabular data" ] ]
+                        , li [] [ a [ href "#text__code" ] [ text "Code" ] ]
+                        , li [] [ a [ href "#text__inline" ] [ text "Inline elements" ] ]
                         ]
                     ]
                 , li []
@@ -78,11 +77,11 @@ view =
                     ]
                 ]
             ]
-        , main' []
+        , main_ []
             [ section [ id "text" ]
                 [ header [] [ h1 [] [ text "Text" ] ]
                 , article [ id "text__headings" ]
-                    [ header [] [ h1 [] [ text "Headings "] ]
+                    [ header [] [ h1 [] [ text "Headings " ] ]
                     , div []
                         [ h1 [] [ text "Header 1" ]
                         , h2 [] [ text "Header 2" ]
@@ -106,8 +105,8 @@ view =
                     , div []
                         [ blockquote []
                             [ p [] [ text "A block quotation (also known as a long quotation or extract) is a quotation in a written document, that is set off from the main text as a paragraph, or block of text." ]
-                            , p [] [  text "It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom." ]
-                            , Html.cite [] [ a [ href "#!" ] [ text "Said no one, ever."] ]
+                            , p [] [ text "It is typically distinguished visually using indentation and a different typeface or smaller size quotation. It may or may not include a citation, usually placed at the bottom." ]
+                            , Html.cite [] [ a [ href "#!" ] [ text "Said no one, ever." ] ]
                             ]
                         ]
                     , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
@@ -240,7 +239,7 @@ p q r s t u v w x y z { | } ~
                             , text "is text with an unarticulated, though explicitly rendered, non-textual annotation."
                             ]
                         , p []
-                            [ del [] [ text "This text is deleted"]
+                            [ del [] [ text "This text is deleted" ]
                             , text " and "
                             , ins [] [ text "This text is inserted" ]
                             ]
@@ -252,8 +251,8 @@ p q r s t u v w x y z { | } ~
                             , text "O."
                             ]
                         , p [] [ small [] [ text "This small text is small for for fine print, etc." ] ]
-                        , p [] [ text "Abbreviation: ", abbr [ title "HyperText Markup Language"] [ text "HTML" ] ]
-                        , p [] [ q [ Html.Attributes.cite "https://developer.mozilla.org/en-US/docs/HTML/Element/q"] [ text "This text is a short inline quotation." ] ]
+                        , p [] [ text "Abbreviation: ", abbr [ title "HyperText Markup Language" ] [ text "HTML" ] ]
+                        , p [] [ q [ Html.Attributes.cite "https://developer.mozilla.org/en-US/docs/HTML/Element/q" ] [ text "This text is a short inline quotation." ] ]
                         , p [] [ Html.cite [] [ text "This is a citation." ] ]
                         , p []
                             [ text "The "
@@ -342,7 +341,7 @@ p q r s t u v w x y z { | } ~
                         ]
                     , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
                     ]
-                ,  article [ id "embedded__progress" ]
+                , article [ id "embedded__progress" ]
                     [ header [] [ h2 [] [ text "Progress" ] ]
                     , div [] [ progress [] [ text "progress" ] ]
                     , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
@@ -378,31 +377,31 @@ p q r s t u v w x y z { | } ~
                         [ legend [] [ text "Input fields" ]
                         , p []
                             [ label [ for "input__text" ] [ text "Text Input" ]
-                            , input [ id "input__text", type' "text", placeholder "Text Input"] []
+                            , input [ id "input__text", type_ "text", placeholder "Text Input" ] []
                             ]
                         , p []
                             [ label [ for "input__password" ] [ text "Password" ]
-                            , input [ id "input__password", type' "password", placeholder "Type your Password"] []
+                            , input [ id "input__password", type_ "password", placeholder "Type your Password" ] []
                             ]
                         , p []
                             [ label [ for "input__webaddress" ] [ text "Web Address" ]
-                            , input [ id "input__webaddress", type' "url", placeholder "http://elm-lang.org"] []
+                            , input [ id "input__webaddress", type_ "url", placeholder "http://elm-lang.org" ] []
                             ]
                         , p []
                             [ label [ for "input__emailaddress" ] [ text "Email Address" ]
-                            , input [ id "input__emailaddress", type' "email", placeholder "asdf@asdf.com"] []
+                            , input [ id "input__emailaddress", type_ "email", placeholder "asdf@asdf.com" ] []
                             ]
                         , p []
                             [ label [ for "input__phone" ] [ text "Phone Number" ]
-                            , input [ id "input__phone", type' "tel", placeholder "(999) 999-9999"] []
+                            , input [ id "input__phone", type_ "tel", placeholder "(999) 999-9999" ] []
                             ]
                         , p []
                             [ label [ for "input__search" ] [ text "Search" ]
-                            , input [ id "input__search", type' "search", placeholder "Enter Search Term"] []
+                            , input [ id "input__search", type_ "search", placeholder "Enter Search Term" ] []
                             ]
                         , p []
                             [ label [ for "input__text2" ] [ text "Number Input" ]
-                            , input [ id "input__text2", type' "number", placeholder "Enter a Number"] []
+                            , input [ id "input__text2", type_ "number", placeholder "Enter a Number" ] []
                             ]
                         ]
                     ]
@@ -413,9 +412,9 @@ p q r s t u v w x y z { | } ~
                         [ label [ for "select" ] [ text "Select" ]
                         , select [ id "select" ]
                             [ optgroup []
-                                [ option [] [ text "Option One"]
-                                , option [] [ text "Option Two"]
-                                , option [] [ text "Option Three"]
+                                [ option [] [ text "Option One" ]
+                                , option [] [ text "Option Two" ]
+                                , option [] [ text "Option Three" ]
                                 ]
                             ]
                         ]
@@ -429,7 +428,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "checkbox1"
                                     , name "checkbox"
-                                    , type' "checkbox"
+                                    , type_ "checkbox"
                                     , checked True
                                     ]
                                     []
@@ -441,7 +440,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "checkbox2"
                                     , name "checkbox"
-                                    , type' "checkbox"
+                                    , type_ "checkbox"
                                     ]
                                     []
                                 , text "Choice B"
@@ -452,7 +451,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "checkbox3"
                                     , name "checkbox"
-                                    , type' "checkbox"
+                                    , type_ "checkbox"
                                     ]
                                     []
                                 , text "Choice C"
@@ -469,7 +468,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "radio1"
                                     , name "radio"
-                                    , type' "radio"
+                                    , type_ "radio"
                                     , checked True
                                     ]
                                     []
@@ -481,7 +480,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "radio2"
                                     , name "radio"
-                                    , type' "radio"
+                                    , type_ "radio"
                                     ]
                                     []
                                 , text "Option 2"
@@ -492,7 +491,7 @@ p q r s t u v w x y z { | } ~
                                 [ input
                                     [ id "radio1"
                                     , name "radio"
-                                    , type' "radio"
+                                    , type_ "radio"
                                     ]
                                     []
                                 , text "Option 3"
@@ -516,11 +515,11 @@ p q r s t u v w x y z { | } ~
                     ]
                 , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
                 , fieldset [ id "forms__html5" ]
-                    [ legend [] [ text "HTML5 inputs"]
+                    [ legend [] [ text "HTML5 inputs" ]
                     , p []
                         [ label [ for "ic" ] [ text "Color input" ]
                         , input
-                            [ type' "color"
+                            [ type_ "color"
                             , id "ic"
                             , value "#000000"
                             ]
@@ -529,7 +528,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "in" ] [ text "Number input" ]
                         , input
-                            [ type' "number"
+                            [ type_ "number"
                             , id "in"
                             , Html.Attributes.min "0"
                             , Html.Attributes.max "10"
@@ -540,7 +539,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "ir" ] [ text "Range input" ]
                         , input
-                            [ type' "range"
+                            [ type_ "range"
                             , id "ir"
                             , value "10"
                             ]
@@ -549,7 +548,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "idd" ] [ text "Date input" ]
                         , input
-                            [ type' "date"
+                            [ type_ "date"
                             , id "idd"
                             , value "1970-01-01"
                             ]
@@ -558,7 +557,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "idm" ] [ text "Month input" ]
                         , input
-                            [ type' "month"
+                            [ type_ "month"
                             , id "idm"
                             , value "1970-01"
                             ]
@@ -567,7 +566,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "idw" ] [ text "Week input" ]
                         , input
-                            [ type' "week"
+                            [ type_ "week"
                             , id "idw"
                             , value "1970-W01"
                             ]
@@ -576,7 +575,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "idt" ] [ text "Datetime input" ]
                         , input
-                            [ type' "datetime"
+                            [ type_ "datetime"
                             , id "idt"
                             , value "1970-01-01T00:00:00Z"
                             ]
@@ -585,7 +584,7 @@ p q r s t u v w x y z { | } ~
                     , p []
                         [ label [ for "idtl" ] [ text "Datetime-local input" ]
                         , input
-                            [ type' "datetime-local"
+                            [ type_ "datetime-local"
                             , id "idtl"
                             , value "1970-01-01T00:00"
                             ]
@@ -593,23 +592,23 @@ p q r s t u v w x y z { | } ~
                         ]
                     ]
                 ]
-                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
-                , fieldset [ id "forms__action" ]
-                    [ legend [] [ text "Action buttons" ]
-                    , p []
-                        [ input [ type' "submit", value "<input type=submit>" ] []
-                        , input [ type' "button", value "<input type=button>" ] []
-                        , input [ type' "reset", value "<input type=reset>" ] []
-                        , input [ type' "submit", value "<input disabled>", disabled True ] []
-                        ]
-                    , p []
-                        [ button [ type' "submit" ] [ text "<button type=submit>" ]
-                        , button [ type' "button" ] [ text "<button type=button>" ]
-                        , button [ type' "reset" ] [ text "<button type=reset>" ]
-                        , button [ type' "button", disabled True ] [ text "<button disabled>" ]
-                        ]
+            , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+            , fieldset [ id "forms__action" ]
+                [ legend [] [ text "Action buttons" ]
+                , p []
+                    [ input [ type_ "submit", value "<input type=submit>" ] []
+                    , input [ type_ "button", value "<input type=button>" ] []
+                    , input [ type_ "reset", value "<input type=reset>" ] []
+                    , input [ type_ "submit", value "<input disabled>", disabled True ] []
                     ]
-                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+                , p []
+                    [ button [ type_ "submit" ] [ text "<button type=submit>" ]
+                    , button [ type_ "button" ] [ text "<button type=button>" ]
+                    , button [ type_ "reset" ] [ text "<button type=reset>" ]
+                    , button [ type_ "button", disabled True ] [ text "<button disabled>" ]
+                    ]
+                ]
+            , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
             ]
         , footer []
             [ p []
@@ -626,6 +625,3 @@ p q r s t u v w x y z { | } ~
                 ]
             ]
         ]
-
-
-
