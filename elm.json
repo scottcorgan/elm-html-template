@@ -3,7 +3,7 @@
     "name": "scottcorgan/elm-html-template",
     "summary": "A large amount of html elements for showcasing styles on a single page",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "exposed-modules": [
         "Html.Template"
     ],
